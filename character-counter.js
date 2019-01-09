@@ -21,21 +21,21 @@ ToDo:
 //var input = process.argv[2].join().toLowerCase();
 //console.log(input);
 
-console.log(countLetters("this is a test"));
+console.log(countLetters("This is a test"));
 
 function countLetters(input){
 
+  var lowerCaseInput = input.toLowerCase();
   var letters = {};
 
   for (var i = 0; i < input.length; i ++){
-    if (input[i].match(/[a-z]/) && !(letters.hasOwnProperty(input[i]))){
-      letters[input[i]] = 1;
-    } else if (input[i].match(/[a-z]/) && (letters.hasOwnProperty(input[i]))){
-      letters[input[i]] += 1;
+    var currentChar = lowerCaseInput[i];
+    if (currentChar.match(/[a-z]/) && !(letters.hasOwnProperty(currentChar))){
+      letters[currentChar] = 1;
+    } else if (currentChar.match(/[a-z]/) && (letters.hasOwnProperty(currentChar))){
+      letters[currentChar] += 1;
     } else {continue;}
   }
-
-  console.log(letters);
 
   return letters;
 
