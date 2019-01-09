@@ -28,9 +28,9 @@ function countLetters(input){
   var letters = {};
 
   for (var i = 0; i < input.length; i ++){
-    if (input[i].match(/[a-z]/) && !(input[i] in letters)){
+    if (input[i].match(/[a-z]/) && !(letters.hasOwnProperty(input[i]))){
       letters[input[i]] = 1;
-    } else if (input[i].match(/[a-z]/) && (input[i] in letters)){
+    } else if (input[i].match(/[a-z]/) && (letters.hasOwnProperty(input[i]))){
       letters[input[i]] += 1;
     } else {continue;}
   }
