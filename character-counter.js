@@ -18,9 +18,6 @@ ToDo:
 
 **************************************************/
 
-//var input = process.argv[2].join().toLowerCase();
-//console.log(input);
-
 console.log(countLetters("This is a test"));
 
 function countLetters(input){
